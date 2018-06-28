@@ -7,9 +7,11 @@
 
 ### Example
 
-```
+Below is a pretty quick overview of the Iron language syntax. For more examples, check the `test` directory.
+
+``` iron
 // Importing some standard modules.
-import { io, http, json } from "@iron/standard";
+import { io } from "@iron/standard";
 
 /// # Documentation Comments
 /// Documentation comments are comments that use Markdown to provide advanced
