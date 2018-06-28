@@ -9,6 +9,16 @@
 
 > Iron is a programming language that draws inspiration from [Rust](https://www.rust-lang.org/en-US/), [Swift](https://swift.org), and [TypeScript](https://www.typescriptlang.org). It is a personal project that aims to help developers build scalable systems in a safe, expressive manner.
 
+### Design Philosophies
+
+* Iron syntax is expressive and easily approachable.
+* The language should embrace and encourage functional programming paradigms.
+* Documentation and testing should be first-class features.
+
+### Getting Started
+
+You should be able to clone this repository and run the project with `cargo`. You will need Rust and LLVM installed and available on your `PATH`.
+
 ### Example
 
 Below is a pretty quick overview of the Iron language syntax. For more examples, check the `test` directory.
@@ -41,12 +51,7 @@ function main {
   let name: String = io.prompt("What is your name?");
   io.print_line(greeting(name));
 }
-
 ```
-
-### Getting Started
-
-You should be able to clone this repository and run the project with `cargo`. You will need Rust and LLVM installed and available on your `PATH`.
 
 ### Contributing
 
