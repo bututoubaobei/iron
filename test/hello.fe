@@ -1,0 +1,54 @@
+// Importing some standard modules.
+import { io, http, json } from "@iron/standard";
+
+/// # Documentation Comments
+/// Documentation comments are comments that use Markdown to provide advanced
+/// formatting features. With a single command, you can generate beautiful
+/// documentation that uses these comments.
+///
+/// NOTE: You don't have to include param/return types; those are included.
+///
+/// # Examples
+///
+/// ```
+/// let hello_world: String = greeting("world"); // Returns `Hello world!`
+/// ```
+function greeting(name: String) -> String {
+  return "Hello ${ name }!";
+}
+
+/// This function is similar to greeting(), except its parameter is an Optional.
+/// This syntax and behavior is inspired by Swift. Also note that it is a public
+/// function which can be used when this file is imported as a module.
+///
+/// # Examples
+///
+/// ```
+/// let hello = optional_greeting(); // Returns `Hello!`
+/// let hello_world = optional_greeting("world"); // Returns `Hello world!`
+/// ```
+public function optional_greeting(name: String?) -> String {
+  return "Hello ${ name? }!" // Shorthand for `name ? name : null`
+}
+
+/// This is an example of an asynchronous function, which is useful when you
+/// want to fetch resources from an external system without blocking the flow
+/// of your program. It also demonstrates the usage of Iron's HTTP module.
+///
+/// If you're familiar with JavaScript, the syntax should be very familiar
+/// since it is exactly the same.
+public async function fetch_resource() -> json {
+  return await json.parse(http.get("https://www.some-website.com/some-resource"));
+}
+
+function main {
+  io.print_line("Functions without parameters don't require parentheses.");
+  io.print_line("All functions, however, require the `function` keyword.");
+
+  // Retrieve the user's name.
+  let name: String = io.prompt("What is your name?");
+  io.print_line(greeting(name));
+
+  // Lambda expressions.
+  let lambda_result = { return "Hello world!" };
+}
