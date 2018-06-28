@@ -11,9 +11,9 @@
 
 ### Design Philosophies
 
-* Iron syntax should be **expressive** and **easily approachable**.
-* The language should embrace and **encourage functional programming paradigms.**
-* Documentation and testing should be **first-class features**.
+* Iron syntax should be expressive and easily approachable.
+* The language should embrace and encourage functional programming paradigms.
+* Documentation and testing should be first-class features.
 
 ### Getting Started
 
