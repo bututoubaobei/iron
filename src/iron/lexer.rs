@@ -53,12 +53,15 @@ pub fn tokens_from_path(path: &str) -> Vec<Token> {
                     ']' => push_token(&mut current, &mut result, Token::CloseBracket),
                     '{' => push_token(&mut current, &mut result, Token::OpenBrace),
                     '}' => push_token(&mut current, &mut result, Token::CloseBrace),
-                    '_' => push_token(&mut current, &mut result, Token::Underscore),
                     '*' => push_token(&mut current, &mut result, Token::Asterisk),
                     '@' => push_token(&mut current, &mut result, Token::At),
                     '$' => push_token(&mut current, &mut result, Token::Template),
                     '<' => push_token(&mut current, &mut result, Token::LessThan),
                     '>' => push_token(&mut current, &mut result, Token::GreaterThan),
+                    // '_' => push_token(&mut current, &mut result, Token::Underscore),
+
+                    // TODO: Handle all escapable characters, not just the backslash.
+                    //       (e.g.) double quote, template, etc.
                     '\\' => push_token(&mut current, &mut result, Token::BackSlash),
                     '/' => {
                         if chars.peek() == Some(&'/') {
@@ -137,7 +140,17 @@ pub fn tokens_from_path(path: &str) -> Vec<Token> {
                     },
                     _ if x.is_whitespace() => {
                         if !current.is_empty() {
-                            let current_token = Token::Identifier(current.clone());
+                            let mut current_token: Token;
+                            match &current[..] {
+                                "let" => current_token = Token::Let,
+                                "type" => current_token = Token::Type,
+                                "import" => current_token = Token::Import,
+                                "function" => current_token = Token::Function,
+                                "protocol" => current_token = Token::Protocol,
+                                "public" => current_token = Token::Public,
+                                "async" => current_token = Token::Async,
+                                _ => current_token = Token::Identifier(current.clone())
+                            }
                             result.push(current_token);
                             current.clear();
                         }

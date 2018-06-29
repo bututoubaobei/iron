@@ -1,5 +1,13 @@
 #[derive(Debug, Clone, PartialEq)]
 pub enum Token {
+    Let,
+    Type,
+    Import,
+    Function,
+    Protocol,
+    Public,
+    Async,
+    Operator(char),
     LineComment(String),
     DocumentComment(String),
     StringLiteral(String),
