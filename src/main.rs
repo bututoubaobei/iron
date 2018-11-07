@@ -25,8 +25,5 @@ fn main() {
     // From: https://docs.rs/clap/2.32.0/clap/
     let source = matches.value_of("INPUT").unwrap();
     let tokens: Vec<Token> = iron::lexer::tokens_from_path(source);
-
-    for token in tokens {
-        println!("{:?}", token);
-    }
+    iron::parser::hello();
 }
