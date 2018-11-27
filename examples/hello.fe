@@ -1,8 +1,3 @@
-function welcome(_ name: String, to place: String): String {
-  return "Welcome to $(place), $(name)!"
-}
-
 function main {
-  let name: String = io.prompt("What is your name?")
-  io.printLine(hello(name))
+  io.print_line("Hello world!")
 }

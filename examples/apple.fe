@@ -1,0 +1,4 @@
+public type Apple {
+  name: String,
+  color: (u8, u8, u8)
+}
