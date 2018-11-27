@@ -5,4 +5,4 @@ authors = ["Sam Jackson <sam@clique.app>"]
 
 [dependencies]
 clap = "2.32.0"
-inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm5-0" }
+inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm7-0" }
