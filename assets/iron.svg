@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>iron</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#B8B8B8" offset="0%"></stop>
+            <stop stop-color="#8D8D8D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-203.000000, -92.000000)">
+            <g id="iron" transform="translate(203.000000, 92.000000)">
+                <rect id="Powerpoint" fill="url(#linearGradient-1)" fill-rule="nonzero" x="0" y="0" width="40" height="40" rx="8"></rect>
+                <text id="Fe" font-family="Montserrat-Medium, Montserrat" font-size="20" font-weight="400" fill="#FFFFFF">
+                    <tspan x="8.25" y="19">Fe</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

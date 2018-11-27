@@ -1,4 +1,4 @@
-<p align="center"><img src="./logo.svg" height="128px" width="128px" /></p>
+<p align="center"><img src="./assets/iron.svg" height="128px" width="128px" /></p>
 <h3 align="center">The Iron Programming Language</h3>
 
 <p align="center">
