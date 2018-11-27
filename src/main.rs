@@ -6,6 +6,7 @@ use clap::App;
 use clap::Arg;
 use clap::AppSettings;
 use iron::token::Token;
+use iron::expression::Expression;
 
 fn main() {
     let matches = App::new("iron")
@@ -21,8 +22,7 @@ fn main() {
 
     // Fetch the input source file and proceed.
     if let Some(source) = matches.value_of("INPUT") {
-        let _: Vec<Token> = iron::lexer::tokens_from_path(source);
+        let tokens: Vec<Token> = iron::lexer::tokens_from_path(source);
+        let _exprs: Vec<Expression> = iron::parser::parse(tokens);
     }
-
-    iron::parser::hello();
 }

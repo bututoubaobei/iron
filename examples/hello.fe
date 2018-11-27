@@ -1,6 +1,5 @@
-// Returns a greeting.
-function hello(name: String): String {
-  return "Hello $(name)!"
+function welcome(_ name: String, to place: String): String {
+  return "Welcome to $(place), $(name)!"
 }
 
 function main {
