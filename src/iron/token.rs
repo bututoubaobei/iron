@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 #[derive(Debug, Clone, PartialEq)]
 pub enum Token {
     Let,
@@ -13,7 +14,7 @@ pub enum Token {
     StringLiteral(String),
     TemplateString(String),
     Identifier(String),
-    Delimiter,
+    Semicolon,
     OfTypeIndicator,
     ReturnTypeIndicator,
     FatArrow,

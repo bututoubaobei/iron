@@ -1,15 +1,17 @@
 use std::fs;
 use iron::token::Token as Token;
 
-#[warn(dead_code)]
+#[allow(dead_code)]
 pub fn hello() {
     println!("Hello from the lexer!");
 }
 
+#[allow(dead_code)]
 fn lexer_panic() {
     panic!("error(lexer): Expected character.");
 }
 
+#[allow(dead_code)]
 /// When we reach a non-alphanumeric symbol (e.g. `;`, `:`, `.`), we must treat the previous
 /// current token as a finalized token and push it to our result vector accordingly. This ensures
 /// that we don't come across a parsing error if someone forgets to use spaces as intended.
@@ -22,6 +24,7 @@ fn push_token(current: &mut String, result: &mut Vec<Token>, token: Token) {
     result.push(token);
 }
 
+#[allow(dead_code)]
 /// Public interface that takes a file path and returns a vector of Tokens corresponding to that
 /// input Iron file. We leverage a peekable list of characters to handle complex tokens like
 /// `->`, `=>`, `+=`, and so on.
@@ -42,7 +45,7 @@ pub fn tokens_from_path(path: &str) -> Vec<Token> {
             Some(x) => {
                 match x {
                     '+' => push_token(&mut current, &mut result, Token::Plus),
-                    ';' => push_token(&mut current, &mut result, Token::Delimiter),
+                    ';' => push_token(&mut current, &mut result, Token::Semicolon),
                     ':' => push_token(&mut current, &mut result, Token::OfTypeIndicator),
                     '\'' => push_token(&mut current, &mut result, Token::SingleQuote),
                     ',' => push_token(&mut current, &mut result, Token::Comma),

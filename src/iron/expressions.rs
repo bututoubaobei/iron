@@ -1,13 +1,6 @@
-pub struct IntegerExpression {
-  value: i32
-}
-
-pub struct BooleanExpression {
-  pub value: bool
-}
-
-pub struct PrototypeExpression {
-  pub name: &'static str,
-  pub parameters: Vec<(&'static str, &'static str)>,
-  pub returns: Vec<&'static str>,
+#[allow(dead_code)]
+pub enum Expression {
+  Integer { value: i32 },
+  Boolean { value: bool },
+  Prototype { name: &'static str, parameters: Vec<(&'static str, &'static str)>, returns: Vec<&'static str> }
 }

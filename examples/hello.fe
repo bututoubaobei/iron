@@ -1,0 +1,9 @@
+// Returns a greeting.
+function hello(name: String): String {
+  return "Hello $(name)!"
+}
+
+function main {
+  let name: String = io.prompt("What is your name?")
+  io.printLine(hello(name))
+}
