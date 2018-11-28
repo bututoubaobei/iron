@@ -9,12 +9,17 @@
 
 > Iron is a programming language built with an emphasis on speed, safety, and usability. It is a personal project that is not production-ready by any means.
 
-## Roadmap
+## Design
 
-- [ ] Language Grammar
-- [x] Lexer
-- [ ] Parser
-- [ ] Machine Code Generation
+### Grammar
+### Lexer
+### Parser
+
+### Code Generation
+
+I was initially planning to use LLVM for native code generation but I have since made the decision to use [Cranelift](https://github.com/CraneStation/cranelift). The two projects are similar at a high level, but the Cranelift authors elaborate on their technical differences [here](https://cranelift.readthedocs.io/en/latest/compare-llvm.html).
+
+From a developer perspective, I did this largely to adhere to Rust project conventions — all you need to build and run this project is Cargo. Cranelift also has a much smaller overhead in general.
 
 ## Contributing
 
