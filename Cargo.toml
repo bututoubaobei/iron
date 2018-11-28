@@ -1,8 +1,10 @@
 [package]
 name = "iron"
-version = "0.1.0"
-authors = ["Sam Jackson <sam@clique.app>"]
+version = "0.0.1"
+authors = ["Sam Jackson <sam@roth.fyi>"]
 
 [dependencies]
 clap = "2.32.0"
-inkwell = { git = "https://github.com/TheDan64/inkwell", branch = "llvm7-0" }
+cranelift = "0.25.0"
+cranelift-codegen = "0.25.0"
+cranelift-frontend = "0.25.0"
