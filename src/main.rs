@@ -22,7 +22,9 @@ fn main() {
 
     // Fetch the input source file and proceed.
     if let Some(source) = matches.value_of("INPUT") {
-        let tokens: Vec<Token> = iron::lexer::tokens_from_path(source);
-        let _exprs: Vec<Expression> = iron::parser::parse(tokens);
+        // let tokens: Vec<Token> = iron::lexer::tokens_from_path(source);
+        // let _exprs: Vec<Expression> = iron::parser::parse(tokens);
+
+        iron::codegen::hello();
     }
 }
